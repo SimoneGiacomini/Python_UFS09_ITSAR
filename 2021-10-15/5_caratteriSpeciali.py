@@ -20,10 +20,10 @@ def stampaSpeciale(cifra, carattere1="@", carattere2="#"):
 
 print (SALUTO)
 lunghezza="hola"
-while not lunghezza.isnumeric():
+while not lunghezza.isdecimal():
     lunghezza = input("Inserisci la lunghezza della stringa speciale da creare\n-> ")
     
-    if not lunghezza.isnumeric():
+    if not lunghezza.isdecimal():
         print("\n>>>>VALORE INSERITO NON è UN NUMERO INTERO<<<<<\n")
 
 lunghezza=int(lunghezza)
