@@ -118,7 +118,12 @@ Questo programma ha un menù dove puoi scegliere di usare delle funzioni riscrit
 
     
 
-scelta=int(input(MENU))
+scelta=(input(MENU))
+if scelta.isnumeric():
+    scelta=int(scelta)
+else :
+    scelta=-1
+    
 while scelta != 0 :
     if scelta == 1 :
         print(CREALISTA)
@@ -150,6 +155,10 @@ while scelta != 0 :
         res=myRange(int(n1),int(n2))
         print("La lista creata è {}".format(res))
     else: 
-        print(PROBLEMA+" il numero scelto non è valido")
-    scelta=int(input(MENU))
+        print("Attenzione il numero scelto non è valido")
+    scelta=(input(MENU))
+    if scelta.isnumeric():
+        scelta=int(scelta)
+    else :
+        scelta=-1
 print("Grazie di aver usato questo programma, buonagiornata =)")
