@@ -21,7 +21,7 @@ while not moltiplicando.isnumeric():
     if moltiplicando.isnumeric():
        break
     else:
-        print("\n>>>>VALORE INSERITO NON è UN NUMERO<<<<<\n")
+        print("\n>>>>VALORE INSERITO NON è UN NUMERO INTERO<<<<<\n")
 
 moltiplicando=int(moltiplicando)
 
@@ -31,6 +31,6 @@ while not moltiplicatore.isnumeric():
     if moltiplicatore.isnumeric():
         break
     else:
-        print("\n>>>>VALORE INSERITO NON è UN NUMERO<<<<<\n")
+        print("\n>>>>VALORE INSERITO NON è UN NUMERO INTERO<<<<<\n")
 moltiplicatore=int(moltiplicatore)
 print("\nLa moltiplicazione tra {} e {} è uguale a {}".format(moltiplicando,moltiplicatore, myMoltiplication(moltiplicando, moltiplicatore)))
