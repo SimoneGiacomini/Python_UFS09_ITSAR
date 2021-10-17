@@ -3,7 +3,7 @@ per l’area del quadrato, del rettangolo e del cerchio (3.14 *
 raggio**2). Il programma deve includere anche un’interfaccia a
 menu
 '''
-my_menu =  """MENU Principale\n1-> area quadrato\n2-> area rettangolo\n3-> area cerchio \n0-> finisci\n-> """
+MENU =  """MENU Principale\n1-> area quadrato\n2-> area rettangolo\n3-> area cerchio \n0-> finisci\n-> """
 
 def areaRettangolo(lato1, lato2):
     return lato1*lato2
@@ -15,7 +15,7 @@ def areacerchio(raggio):
 print("""CIAO ~Simone Giacomini
 Questo programma permette di calcolare l'area del quadrato, del rettangolo oppure di un cerchio \n""")
 
-scelta=int(input(my_menu))
+scelta=int(input(MENU))
 while scelta != 0 :
     if scelta ==1 :
         lato= int(input("inserisci il lato del quadrato: "))
@@ -30,6 +30,6 @@ while scelta != 0 :
     else:
         print("funzione inesistente! scegli bene! ")
     input("Premi un tasto per andare avanti-> ")
-    scelta=int(input(my_menu))
+    scelta=int(input(MENU))
 
 print("Grazie di aver usato questo programma, buonagiornata =)")

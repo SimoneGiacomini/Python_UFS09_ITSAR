@@ -7,10 +7,7 @@ SALUTO ="""CIAO ~Simone Giacomini
 Questo programma chiede in input una lista di numeri ed infine un numero da cercare, se quel numero è presente nella lista ti fa un complimento"
 """
 
-##funzione che crea una lista
-#viene creata una lista dinamica chiedendo dopo ogni inserimento se si vuole concludere oppure andare avanti nell'inserire elementi nella lista
-#la funzione riesce a distinguere se gli elementi inseriti sono numeri o stringhe
-
+##Funzione che utilizza le eccezioni trovata su stack overflow
 def isNumber(numero):
     try:
         float(numero)
@@ -18,8 +15,16 @@ def isNumber(numero):
     except:
         return False
 
+#funzione richiesta dall'esercizio
+def isInLista(lista, valore_da_cercare):
+    if lista.count(valore_da_cercare)>0:
+        return True 
+    else:
+        return False 
 
-
+##funzione che crea una lista
+#viene creata una lista dinamica chiedendo dopo ogni inserimento se si vuole concludere oppure andare avanti nell'inserire elementi nella lista
+#la funzione riesce a distinguere se gli elementi inseriti sono numeri o stringhe
 def creaLista():
     lista=[]
     contatore=0
@@ -43,7 +48,7 @@ numero_da_cercare= input("Inserisci ora il numero da cercare: ")
 while not isNumber(numero_da_cercare):
     numero_da_cercare= input("Il valore che hai inserito non è un numero\nriprova: ")
 numero_da_cercare=float(numero_da_cercare)
-if lista.count(numero_da_cercare)>0:
-    print("il valore {} è presente nella lista {}".format(numero_da_cercare, lista))
+if isInLista(lista, numero_da_cercare):
+    print("Complimenti =)\nil valore {} è presente nella lista {}".format(numero_da_cercare, lista))
 else:
-    print("il valore {} NON è presente nella lista {}".format(numero_da_cercare, lista))
+    print("Sfortunatamente =(\nil valore {} NON è presente nella lista {}".format(numero_da_cercare, lista))
