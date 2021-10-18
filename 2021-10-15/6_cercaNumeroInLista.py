@@ -22,7 +22,7 @@ def isInLista(lista, valore_da_cercare):
     else:
         return False 
 
-##funzione che crea una lista
+##funzione che crea una lista con anche i float
 #viene creata una lista dinamica chiedendo dopo ogni inserimento se si vuole concludere oppure andare avanti nell'inserire elementi nella lista
 #la funzione riesce a distinguere se gli elementi inseriti sono numeri o stringhe
 def creaLista():
