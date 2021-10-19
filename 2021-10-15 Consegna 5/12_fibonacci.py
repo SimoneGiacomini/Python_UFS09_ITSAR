@@ -4,7 +4,7 @@ liste, ma usando un ciclo su una lista e documentarsi sul metodo append)"""
 
 #costanti
 SALUTO ="""CIAO ~Simone Giacomini
-Questo programma produce una lista di numeri di Fibonacci fino ad il numero inserito"
+Questo programma produce una lista di numeri di Fibonacci fino ad il numero inserito
 """
 def fibonacci(n):
     lista=[]
