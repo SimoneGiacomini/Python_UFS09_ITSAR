@@ -8,6 +8,8 @@ Questo programma chiede in input una lista di numeri ed infine un numero da cerc
 """
 
 ##Funzione che utilizza le eccezioni trovata su stack overflow
+#ritorna vero se il valore passato può essere convertito in un numero reale
+#falso altrimenti
 def isNumber(numero):
     try:
         float(numero)
