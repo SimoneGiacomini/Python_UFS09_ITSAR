@@ -112,12 +112,6 @@ Questo programma ha un menù dove puoi scegliere di usare delle funzioni riscrit
 """)
 
 
-
-
-        
-
-    
-
 scelta=(input(MENU))
 if scelta.isnumeric():
     scelta=int(scelta)

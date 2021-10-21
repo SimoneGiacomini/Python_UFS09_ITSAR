@@ -19,7 +19,7 @@ def isNumber(numero):
 
 #funzione richiesta dall'esercizio
 def isInLista(lista, valore_da_cercare):
-    if lista.count(valore_da_cercare)>0:
+    if valore_da_cercare in lista:
         return True 
     else:
         return False 
