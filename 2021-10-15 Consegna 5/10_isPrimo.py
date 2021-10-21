@@ -13,17 +13,16 @@ def isPrimo(numero):
     if numero % 2 == 0:
         return False
 
-    div = 0  # quanti dividendi ha?
+    div = 0  # quanti divisori ha?
 
     # controllo tutti i numeri da 1 al numero stesso (numero+1 è necessario in quanto l'ultimo numero è esclusivo)
     for e in range(1, numero+1):
         if (numero % e) == 0:  # e è un divisore di numero?
             div += 1
+        if(div > 2):
+            return False
 
-    if(div > 2):
-        return False
-    else:
-        return True
+    return True
 
 
 

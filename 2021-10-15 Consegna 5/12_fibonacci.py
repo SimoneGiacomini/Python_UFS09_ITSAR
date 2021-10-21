@@ -7,16 +7,16 @@ SALUTO ="""CIAO ~Simone Giacomini
 Questo programma produce una lista di numeri di Fibonacci fino ad il numero inserito
 """
 def fibonacci(n):
-    lista=[]
     f0=0
     f1=1
+    lista=[f0]
     if n==0:
          lista.append(f0)
          return lista
     elif n<0:
         return None 
     else:
-        lista.extend([f0,f1])
+        lista.append(f1)
 
     while f0+f1<=n:
         n_calcolato=f0+f1
