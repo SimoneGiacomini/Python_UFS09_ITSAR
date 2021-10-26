@@ -1,3 +1,11 @@
+"""media: passando come parametro una lista deve calcolare/restituire il valore medio"""
+
+
+#costanti
+SALUTO ="""CIAO ~Simone Giacomini
+Questo programma permette di creare una lista di numeri e restituisce il valore medio
+"""
+
 ##Funzione che utilizza le eccezioni trovata su stack overflow
 #ritorna vero se il valore passato può essere convertito in un numero reale
 #falso altrimenti
@@ -36,6 +44,7 @@ def mediaLista(lista):
 
 
 #inizio programma
+
 lista=creaLista()
 print("La media della lista {} è uguale a {}".format(lista,mediaLista(lista)))
 

@@ -1,3 +1,8 @@
+#costanti
+SALUTO ="""CIAO ~Simone Giacomini
+Questo programma permette di creare una lista di numeri e restituisce la mediana
+"""
+
 ##Funzione che utilizza le eccezioni trovata su stack overflow
 #ritorna vero se il valore passato può essere convertito in un numero reale
 #falso altrimenti
@@ -29,13 +34,20 @@ def creaLista():
 #funzione richiesta
 def mediana(lista):
     lunghezza_lista = len(lista)
+    if lunghezza_lista == 0:
+        return None
+    lista= sorted(lista)
     if lunghezza_lista%2 == 0:
-        return (lista[0]+lista[-1])/2
+        lunghezza_lista= lunghezza_lista//2
+        return (lista[lunghezza_lista]+lista[lunghezza_lista-1])/2
     else:
-        return lista[int(lunghezza_lista/2)]
+        return lista[(lunghezza_lista//2)]
 
 #inizio programma
 lista=creaLista()
-print("La mediana della lista {} è uguale a {}".format(lista,mediana(lista)))
-
+risultato = mediana(lista)
+if risultato is None :
+    print("La lista è vuota")
+else:
+    print("La mediana della lista {} è uguale a {}".format(lista,risultato))
 
