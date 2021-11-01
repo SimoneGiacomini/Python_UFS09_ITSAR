@@ -13,18 +13,18 @@ Questo programma permette di creare una lista di oggetti lampadina e di gestirle
 
 class Lampadina:
     #attributi :
-    #identificatore -> str. DEFAULT = ""
+    #identificatore -> str. 
     #stato -> bool. DEFAULT = False. False indica spento
 
 
     # Costruttore
-    def __init__(self, ident="", stato=False):
+    def __init__(self, ident, stato=False):
         self.__identificatore = ident
         self.__stato = stato
 
     # OUTPUT A VIDEO
     def __str__(self) -> str:
-        output = "ID: "+self.__identificatore+"; STATO:"+self.getStatoStr+";"
+        output = "ID: "+self.__identificatore+"; STATO: "+self.getStatoStr()+";"
         return output
 
     # get per attributo __identificatore
@@ -47,33 +47,44 @@ class Lampadina:
 
 def traduciAccesaSpenta(inp) -> bool:
     inp = str(inp).lower()
-    l_false = [" 0 ", " spento ", " off ", " false ", " spenta ", " falso ", " non accesa ", " non acceso "]
-    for el in l_false:
-        if inp is el:
-            return False
+    l_false = " 0  spento  off  false  spenta  falso "
+    if inp in l_false:
+        return False
+    elif inp == "non accesa":
+        return False
+    elif inp == "non acceso":
+        return False
     return True
 
 
+
+#crea una lista di lampadine, dove l'utente può inserire in input il loro ID ed il loro stato (acceso o spento)
+#come parametro vuole un numero e restituisce una lista di lampadine
 def creaListaLampadine(numero_di_lampadine):
     lista = []
-    contatore=0
     for i in range(0, numero_di_lampadine):
-        id_lampadina = input("\nInserisci il nome della {} lampadina: ".format(contatore+1))
+        id_lampadina = input("\nInserisci il nome della {} lampadina: ".format(i+1))
         stato_lampadina = traduciAccesaSpenta(
-            input("\nLa vuoi accesa o spenta la lampadina {}?: ".format(id_lampadina)))
+            input("\nLa vuoi accesa o spenta la lampadina '{}'?: ".format(id_lampadina)))
         lista.append(Lampadina(id_lampadina, stato_lampadina))
-        contatore+=1
     return lista
+
+#printa gli elementi di una lista
+def printLista(lista_):
+    for el in lista_:
+        print(el)
+    
 
 
 # MAIN
 print(SALUTO)
 numero_lampadine = input("inserisci quante lampadine vuoi creare: ")
 while not numero_lampadine.isnumeric():
-    print("Non hai inserito un numero, riprova")
+    print("Non hai inserito un numero naturale, riprova")
     numero_lampadine = input("inserisci quante lampadine vuoi creare: ")
 my_lista = creaListaLampadine(int(numero_lampadine))
-
+print("Le lampadine che hai creato sono :")
+printLista(my_lista)
 
 
 
